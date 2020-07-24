@@ -1,0 +1,84 @@
+html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(-90deg, rgb(138, 39, 138), rgb(238, 156, 238));
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 5vh 25vh repeat(5, 1fr);
+    grid-template-areas: 
+        "h1 h1 h1 h1"
+        "input input input input";
+}
+
+h1 {
+    grid-area: h1;
+    align-self: center;
+    justify-self: center;
+    color: white;
+    font-size: 2.5vh;
+    letter-spacing: 5px;
+}
+
+#input {
+    grid-area: input;
+    background: white;
+    text-align: right;
+    padding: 0 2vh;
+    overflow: auto;
+}
+
+#calc {
+    height: 15vh;
+    font-size: 7vh;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+#result {
+    font-size: 5vh;
+    color: lightgray;
+    padding-top: 4vh;
+}
+
+button {
+    font-size: 5vh;
+    border: 0;
+}
+
+button:hover {
+    background: linear-gradient(-45deg, rgb(138, 39, 138), rgb(238, 156, 238)) !important;
+    color: white !important;
+}
+
+.operator, #clear, #ce, #bracket {
+    background-color: rgb(235, 235, 235);
+    color:rgb(138, 39, 138);
+}
+
+.num, #posNegSign {
+    color: rgb(138, 39, 138);
+    background: white;
+}
+
+#equals {
+    color: white;
+    background: linear-gradient(-45deg, rgb(138, 39, 138), rgb(238, 156, 238));
+}
+
+#clear, #equals {
+    grid-column: span 2;
+}
+
+/* Styles for keyboard-events */
+.keyPressed {
+    transition: 0.1s; 
+    background: linear-gradient(-45deg, rgb(138, 39, 138), rgb(238, 156, 238)) !important;
+    color: white !important;        
+}
